@@ -132,6 +132,7 @@ module.exports =
     "DataFormat": "Percent",
     "Data": 0.49022
   },
+
   {
     "Location": "ADAMS COUNTY 14",
     "TimeFrame": 2007,

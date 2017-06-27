@@ -1,10 +1,15 @@
-import kinderData from '../data/kindergartners_in_full_day_program.js';
+
 
 
 export default class DistrictRepository {
-  constructor (kinderData) {
+  constructor (data) {
 
-    this.data = kinderData.reduce((obj, state, i, arr) => {
+    this.data = this.parseData(data)
+  }
+
+  parseData(data){
+    
+    return data.reduce((obj, state, i, arr) => {
 
         if(!obj[state.Location]){
           // console.log(state.TimeFrame);
@@ -25,14 +30,13 @@ export default class DistrictRepository {
   findByName(location){
 
     const data = this.data
-    // console.log(data);
 
     if(location === undefined){
       return undefined
     } else {
 
       const locationUpper = location.toUpperCase()
-      // console.log(data[locationUpper]);
+
       if(data[locationUpper]){
         return data[locationUpper]
       }
