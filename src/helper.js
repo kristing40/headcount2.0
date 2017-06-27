@@ -8,19 +8,20 @@ export default class DistrictRepository {
   }
 
   parseData(data){
-    
-    return data.reduce((obj, state, i, arr) => {
 
-        if(!obj[state.Location]){
-          // console.log(state.TimeFrame);
-          obj[state.Location.toUpperCase()] = {location: state.Location, data: {[state.TimeFrame] : Math.ceil(state.Data * 1000)/1000 } }
-        } else {
-          const locationKey = obj[state.Location.toUpperCase()].data
-          // console.log(locationKey);
-          const dataObj = Object.assign({}, ...[locationKey])
-          // console.log(dataObj);
-          // obj[state.Location.toUpperCase()] = {location: state.Location, data: {[dataObj]} }
-        }
+    return data.reduce((obj, value, i) => {
+
+      let placeUpper = value.Location.toUpperCase()
+
+      if(!obj[value.Location]){
+
+        obj[placeUpper] = {location: value.Location, data: { [value.TimeFrame] : Math.round(value.Data * 1000)/1000} }
+
+      } else {
+
+        obj[placeUpper].data = Object.assign({}, obj[placeUpper].data, {[value.TimeFrame] : Math.round(value.Data * 1000)/1000 } )
+
+      }
       return obj;
     },{})
   }
@@ -33,6 +34,7 @@ export default class DistrictRepository {
 
     if(location === undefined){
       return undefined
+
     } else {
 
       const locationUpper = location.toUpperCase()
