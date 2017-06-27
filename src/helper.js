@@ -9,7 +9,7 @@ export default class DistrictRepository {
 
   convertNA(value) {
     if(value.Data === "N/A") {
-      console.log("Hello")
+      // console.log("Hello")
       value.Data = 0
       return value.Data
     } else {
