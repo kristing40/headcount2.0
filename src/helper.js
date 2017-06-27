@@ -1,15 +1,11 @@
-
-
-
 export default class DistrictRepository {
   constructor (data) {
-
     this.data = this.parseData(data)
   }
 
   convertNA(value) {
     if(value.Data === "N/A") {
-      // console.log("Hello")
+
       value.Data = 0
       return value.Data
     } else {
@@ -36,7 +32,6 @@ export default class DistrictRepository {
     },{})
   }
 
-
   findByName(location){
 
     const data = this.data
@@ -53,4 +48,22 @@ export default class DistrictRepository {
       }
     }
   }
+
+  findAllMatches(str) {
+    let keys = Object.keys(this.data);
+    if(str === undefined) {
+      return keys
+    } else {
+      let upperCaseStr = str.toUpperCase();
+      let matchArray = [];
+      keys.forEach((key) => {
+        if(key.includes(upperCaseStr)){
+          matchArray.push(this.data[key]);
+        console.log(matchArray);
+        }
+      });
+      return matchArray
+  }
 }
+
+}//End of class
