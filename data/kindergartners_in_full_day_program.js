@@ -1454,7 +1454,7 @@ module.exports =
     "Data": 1
   },
   {
-    "Location": "BUENA VISTA R-31",
+    "Location": "BUE VISTA R-31",
     "TimeFrame": 2007,
     "DataFormat": "Percent",
     "Data": 0.39024
