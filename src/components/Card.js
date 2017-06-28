@@ -1,12 +1,16 @@
 import React from 'react'
 import PropTypes, {shape, string, func, arrayOf, number} from 'prop-types'
 
+const Card = ({location, data}) => {
+  const cardYear = Object.keys(data)
+  
+  const cardData = data[cardYear]
+  console.log(cardData);
 
-const Card = () => {
   return (
     <div className="data-card">
-      <h2>Denver</h2>
-      <p>data</p>
+      <h2>{location}</h2>
+      <p>{cardYear}</p>
     </div>
   )
 }
