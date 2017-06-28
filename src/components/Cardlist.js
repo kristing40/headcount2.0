@@ -6,7 +6,7 @@ const CardList = ({ data }) => {
   const keys = Object.keys(data)
 
   const dataList = keys.map((key) => <Card {...data[key]} />)
-
+  
   return(
     <div className="card-list">
       {dataList}
