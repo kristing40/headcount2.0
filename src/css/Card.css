@@ -1,11 +1,42 @@
+.card-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h2 {
   color: #000;
   font-weight: bold;
+  font-family: 'Droid Sans', sans-serif;
+}
+.location{
+  font-size: 85%;
 }
 
 .data-card {
+  display: flex;
+  justify-content: center;
   border: 1px solid gray;
-  border-radius: 25px;
-  height: 80px;
-  width: 50px;
+  border-radius: 10px;
+  height: 350px;
+  width: 200px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.year-data-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.year,
+.data {
+  margin: 2px;
+  border: 1px solid black;
+  line-height: 20px;
+}
+
+.year-wrapper,
+.data-wrapper {
+  width: 75px;
 }
