@@ -1,0 +1,21 @@
+body {
+  box-sizing: border-box;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  height: 30px;
+  margin-bottom: 50px;
+  padding-top: 5px;
+  padding-left: 5px;
+  width: 450px;
+}
+
+input::placeholder {
+  color: #D1D1D1;
+  font-size: 20px;
+}
