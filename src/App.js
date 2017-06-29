@@ -10,7 +10,7 @@ class App extends Component {
     super ();
     const district = new DistrictRepository(kinderData);
     this.state = {
-      data: district.data
+      data: district.data,
     }
   }
 
@@ -20,7 +20,6 @@ class App extends Component {
         <div className="header">
           <h1>HEADCOUNT 2.0</h1>
         </div>
-
         <CardList data={this.state.data}/>
       </div>
     );
