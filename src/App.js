@@ -26,4 +26,8 @@ class App extends Component {
   }
 }
 
+App.PropTypes = {
+  
+}
+
 export default App;
