@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes, {shape, string, func, arrayOf, number} from 'prop-types'
+import PropTypes, { object, string } from 'prop-types'
 import Card from './Card'
 import '../css/CardList.css'
 
@@ -17,6 +17,10 @@ const CardList = ({ data }) => {
 
     </div>
   )
+}
+
+CardList.PropTypes = {
+  data: React.PropTypes.object
 }
 
 export default CardList;

@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes, {shape, string, func, arrayOf, number} from 'prop-types'
+import PropTypes, { string } from 'prop-types'
 import '../css/Card.css'
 
 const Card = ({location, data}) => {
@@ -33,5 +33,10 @@ const Card = ({location, data}) => {
       </div>
     </div>
   )
+}
+
+Card.PropTypes = {
+  data: React.PropTypes.object.isRequired,
+  location: React.PropTypes.string.isRequired
 }
 export default Card;
