@@ -6,6 +6,7 @@
 
 .year{
   padding-left: 5px;
+  color: fff;
 }
 
 h2 {
@@ -15,18 +16,22 @@ h2 {
 }
 
 .location{
+  border-bottom: 1px solid #636363;
+  color: #636363;
   font-size: 85%;
 }
 
 .data-card {
   display: flex;
   justify-content: center;
+  background-color: #fff;
   border: 1px solid gray;
   border-radius: 10px;
+  color: #fff;
   height: 350px;
   width: 200px;
   margin: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 .year-data-wrapper{
@@ -36,9 +41,8 @@ h2 {
 
 .year,
 .data {
-  color: black;
+  color: #4F4F4F;
   margin: 2px;
-  border: 1px solid black;
   line-height: 20px;
 }
 
