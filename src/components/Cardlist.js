@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import Card from './Card'
 import '../css/CardList.css'
 
-const CardList = ({ data }) => {
-  const keys = Object.keys(data)
+const CardList = ({dataObj}) => {
 
-  const dataList = keys.map((dataKey) =>
-  <Card {...data[dataKey]} key={dataKey.toString()} />)
+  const locationObj = dataObj.map(location => {
+    return <Card {...location} />
+  })
 
   return(
     <div className="card-list-wrapper">
-      {dataList}
+      {locationObj}
     </div>
   )
 }

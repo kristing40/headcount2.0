@@ -7,14 +7,30 @@ import DistrictRepository from './helper.js';
 
 
 class App extends Component {
+
   constructor() {
     super ();
-    const district = new DistrictRepository(kinderData);
     this.state = {
-      data: district.data,
-      input: []
+      dataObj: null
     }
+
   }
+
+  componentWillMount() {
+    const district = new DistrictRepository(kinderData);
+    const parseData = district.data
+    const keys = Object.keys(parseData)
+    const dataList = keys.map((dataKey) => parseData[dataKey])
+    this.setState({dataObj: dataList})
+  }
+
+  filteredLocations(str) {
+    const district = new DistrictRepository(kinderData);
+    const matches = district.findAllMatches(str)
+    this.setState({dataObj: matches })
+
+  }
+
 
   render() {
     return (
@@ -23,9 +39,9 @@ class App extends Component {
           <h1>HEADCOUNT 2.0</h1>
         </div>
         <div>
-          <Search/>
+          <Search filteredLocations={this.filteredLocations.bind(this)}/>
         </div>
-        <CardList data={this.state.data}/>
+        <CardList dataObj={this.state.dataObj}/>
       </div>
     );
   }
