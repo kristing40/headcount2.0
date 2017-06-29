@@ -26,7 +26,6 @@ export default class DistrictRepository {
       } else {
 
         obj[placeUpper].data = Object.assign({}, obj[placeUpper].data, {[value.TimeFrame] : this.convertNA(value) } )
-
       }
       return obj;
     },{})
@@ -51,15 +50,32 @@ export default class DistrictRepository {
 
   findAllMatches(str) {
     let keys = Object.keys(this.data);
+    let parseData = this.data;
+    let matchArray = [];
+
     if(str === undefined) {
       return keys
     } else {
       let upperCaseStr = str.toUpperCase();
-      let matchArray = [];
+
+      // const newObj = keys.reduce((matchObj, key) => {
+      //   if(key.includes(upperCaseStr)){
+      //     matchObj[key] = parseData[key];
+      //   }
+      //   console.log(matchObj.length);
+      // },{})
+
+
+      // keys.forEach((key) => {
+      //   if(key.includes(upperCaseStr)){
+      //     var matchObj = Object.assign({},parseData[key] )
+      //   }
+      //   console.log(matchObj);
+      // })
+
       keys.forEach((key) => {
         if(key.includes(upperCaseStr)){
           matchArray.push(this.data[key]);
-        console.log(matchArray);
         }
       });
       return matchArray
