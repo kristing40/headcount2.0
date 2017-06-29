@@ -4,15 +4,17 @@ import PropTypes from 'prop-types'
 
 
 class Search extends Component {
-  constructor () {
-    super();
+  constructor ( {filteredLocations}) {
+    super( {filteredLocations} );
     this.state ={
       input: ''
     }
+
   }
 
 handleChange(e) {
     this.setState({input: e.target.value})
+    this.props.filteredLocations(this.state.input)
   }
 
   render() {
