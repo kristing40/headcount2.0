@@ -26,7 +26,6 @@ class App extends Component {
           <Search/>
         </div>
         <CardList data={this.state.data}/>
-
       </div>
     );
   }

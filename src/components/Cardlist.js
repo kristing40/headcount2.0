@@ -4,8 +4,6 @@ import Card from './Card'
 import '../css/CardList.css'
 
 const CardList = ({ data }) => {
-  console.log(data);
-
   const keys = Object.keys(data)
 
   const dataList = keys.map((dataKey) =>
