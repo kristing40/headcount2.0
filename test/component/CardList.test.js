@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import CardList from '../../src/components/CardList';
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
+  //const div = document.createElement('div');
   // ReactDOM.render(<App />, div);
 });

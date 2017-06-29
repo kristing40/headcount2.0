@@ -31,6 +31,7 @@ h2 {
 
 .year,
 .data {
+  color: black;
   margin: 2px;
   border: 1px solid black;
   line-height: 20px;
@@ -39,4 +40,8 @@ h2 {
 .year-wrapper,
 .data-wrapper {
   width: 75px;
+}
+
+.year.highlight {
+  color: red;
 }
