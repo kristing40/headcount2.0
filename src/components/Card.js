@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import '../css/Card.css'
 
 const Card = ({ location, data }) => {
-
   const keyYear = Object.keys(data)
 
   const yearData = keyYear.map((year) => {
