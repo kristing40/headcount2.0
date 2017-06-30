@@ -13,9 +13,8 @@ class Search extends Component {
   }
 
 handleChange(e) {
-  console.log(this.props.filteredLocations);
     this.setState({input: e.target.value})
-    this.props.filteredLocations(this.state.input)
+    this.props.filteredLocations(e.target.value)
   }
 
   render() {
