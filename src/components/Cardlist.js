@@ -4,10 +4,9 @@ import Card from './Card'
 import '../css/CardList.css'
 
 const CardList = ({dataObj}) => {
-  console.log(dataObj);
 
-  const locationObj = dataObj.map(location => {
-    return <Card {...location} />
+  const locationObj = dataObj.map((location,i) => {
+    return <Card {...location} key={location.toString() + i} />
   })
 
   return(
@@ -18,7 +17,7 @@ const CardList = ({dataObj}) => {
 }
 
 CardList.propTypes = {
-  data: PropTypes.object
+  dataObj: PropTypes.array.isRequired
 }
 
 export default CardList;
