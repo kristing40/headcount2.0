@@ -4,6 +4,7 @@ import Card from './Card'
 import '../css/CardList.css'
 
 const CardList = ({dataObj}) => {
+  console.log(dataObj);
 
   const locationObj = dataObj.map(location => {
     return <Card {...location} />
