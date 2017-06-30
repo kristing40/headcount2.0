@@ -11,3 +11,10 @@ it('should have a classfield', () => {
 
   expect(wrapper.hasClass('data-card')).toBe(true)
 });
+
+it('should have one h2 className', () => {
+
+  const wrapper = mount(<Card location={location} data={data}/>)
+  
+  expect(wrapper.find('.location').length).toBe(1)
+});

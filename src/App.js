@@ -28,7 +28,6 @@ class App extends Component {
     this.setState({dataObj: matches })
   }
 
-
   render() {
     return (
       <div className='app'>
