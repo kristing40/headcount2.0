@@ -21,7 +21,8 @@ handleChange(e) {
   render() {
     return(
       <div className="search-bar">
-        <input type="text" placeholder="Enter district" onChange={this.handleChange.bind(this)}/>
+        <input type="text"
+          value={this.state.input} placeholder="Enter district" onChange={this.handleChange.bind(this)}/>
       </div>
     )
   }
