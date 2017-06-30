@@ -20,12 +20,14 @@ it('Initial state should start with an array of data', () => {
 
   expect(wrapper.state().dataObj).toEqual(dataList);
 });
-it('should only have two objects in an array', () => {
+
+it('should only have two objects in an array on search', () => {
   const wrapper = mount(<App/>)
   const search =wrapper.find('input');
 
+  expect(wrapper.state().dataObj.length).toEqual(181);
+
   search.simulate('change', {target: {value: 'Colorado'}});
 
-  console.log(wrapper.state());
-  //expect(wrapper.state().dataObj).toEqual(1);
+  expect(wrapper.state().dataObj.length).toEqual(2);
 });
