@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Card from '../../src/components/Card';
 import { shallow, mount } from 'enzyme';
 
-const data = 0.963
+const data = 0.964
 const location = 'Aspen'
 
 it('should have a classfield', () => {
