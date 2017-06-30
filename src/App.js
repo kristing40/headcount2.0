@@ -5,6 +5,7 @@ import Search from './components/Search'
 import kinderData from  './Data'
 import DistrictRepository from './helper.js';
 
+const district = new DistrictRepository(kinderData);
 
 class App extends Component {
 
@@ -13,11 +14,9 @@ class App extends Component {
     this.state = {
       dataObj: null
     }
-
   }
 
   componentWillMount() {
-    const district = new DistrictRepository(kinderData);
     const parseData = district.data
     const keys = Object.keys(parseData)
     const dataList = keys.map((dataKey) => parseData[dataKey])
@@ -25,16 +24,14 @@ class App extends Component {
   }
 
   filteredLocations(str) {
-    const district = new DistrictRepository(kinderData);
     const matches = district.findAllMatches(str)
     this.setState({dataObj: matches })
-
   }
 
 
   render() {
     return (
-      <div>
+      <div className='app'>
         <div className="header">
           <h1>HEADCOUNT 2.0</h1>
         </div>
