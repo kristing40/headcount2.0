@@ -1,0 +1,9 @@
+.card-list-wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0A804;
+  padding-top: 15px;
+  height: 100%;
+}
