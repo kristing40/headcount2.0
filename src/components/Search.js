@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 
 class Search extends Component {
-  constructor ( {filteredLocations}) {
-    super( {filteredLocations} );
+  constructor (props) {
+    super(props);
     this.state ={
       input: ''
     }
@@ -13,6 +13,7 @@ class Search extends Component {
   }
 
 handleChange(e) {
+  console.log(this.props.filteredLocations);
     this.setState({input: e.target.value})
     this.props.filteredLocations(this.state.input)
   }
@@ -24,6 +25,10 @@ handleChange(e) {
       </div>
     )
   }
+}
+
+Search.propTypes = {
+  filteredLocations: PropTypes.func.isRequired
 }
 
 export default Search;

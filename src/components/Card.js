@@ -52,7 +52,7 @@ const Card = ({ location, data }) => {
 }
 
 Card.propTypes = {
-  data: PropTypes.number.isRequired,
+  data: PropTypes.object.isRequired,
   location: PropTypes.string.isRequired
 }
 
