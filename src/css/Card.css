@@ -44,6 +44,7 @@ h2 {
   color: #4F4F4F;
   margin: 2px;
   line-height: 20px;
+  position: relative;
 }
 
 .year-wrapper,
@@ -51,6 +52,43 @@ h2 {
   width: 75px;
 }
 
-.year.highlight {
-  color: red;
+.year.highlight1 {
+  background-color: rgba(96, 206, 85, 0.1);
+  width: 5px;
+}
+.year.highlight2 {
+  background-color: rgba(96, 206, 85, 0.2);
+  width: 10px;
+}
+.year.highlight3 {
+  background-color: rgba(96, 206, 85, 0.3);
+  width: 15px;
+}
+.year.highlight4 {
+  background-color: rgba(96, 206, 85, 0.4);
+  width: 20px;
+}
+.year.highlight5 {
+  background-color: rgba(96, 206, 85, 0.5);
+  width: 25px;
+}
+.year.highlight6 {
+  background-color: rgba(96, 206, 85, 0.6);
+  width: 30px;
+}
+.year.highlight7 {
+  background-color: rgba(96, 206, 85, 0.7);
+  width: 35px;
+}
+.year.highlight8 {
+  background-color: rgba(96, 206, 85, 0.8);
+  width: 40px;
+}
+.year.highlight9 {
+  background-color: rgba(96, 206, 85, 0.9);
+  width: 45px;
+}
+.year.highlight10 {
+  background-color: rgb(96, 206, 85);
+  width: 50px;
 }
