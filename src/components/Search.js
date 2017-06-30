@@ -9,7 +9,6 @@ class Search extends Component {
     this.state ={
       input: ''
     }
-
   }
 
 handleChange(e) {

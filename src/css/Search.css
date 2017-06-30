@@ -24,7 +24,13 @@ input::placeholder {
 }
 
 /****Media Queries****/
-@media screen and  (max-width: 320px) {
+@media screen and  (max-width: 400px) {
+  input {
+    width: 250px;
+  }
+}
+/****Media Queries****/
+@media screen and  (max-width: 350px) {
   input {
     width: 200px;
   }
