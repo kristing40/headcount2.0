@@ -21,6 +21,7 @@ export default class DistrictRepository {
 
       if(!obj[value.Location]){
 
+
         obj[placeUpper] = {location: value.Location, data: { [value.TimeFrame] : this.convertNA(value)} }
 
       } else {

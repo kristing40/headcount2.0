@@ -5,8 +5,9 @@ import Search from './components/Search'
 import kinderData from  './Data'
 import DistrictRepository from './helper.js';
 
-const district = new DistrictRepository(kinderData);
 
+
+const district = new DistrictRepository(kinderData);
 class App extends Component {
 
   constructor() {
@@ -20,6 +21,7 @@ class App extends Component {
     const parseData = district.data
     const keys = Object.keys(parseData)
     const dataList = keys.map((dataKey) => parseData[dataKey])
+
     this.setState({dataObj: dataList})
   }
 

@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import Card from './Card'
 import '../css/CardList.css'
 
-const CardList = ({dataObj}) => {
+const CardList = ({ dataObj }) => {
 
   const locationObj = dataObj.map((location,i) => {
+
     return <Card {...location} key={location.toString() + i} />
   })
 
